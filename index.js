@@ -44,10 +44,7 @@ async function getAIResponse(text) {
 }
 
 const mongoUri = process.env.MONGO_URI || 'mongodb://mongo:27017/chatapp';
-mongoose.connect(mongoUri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).catch((err) => console.error('MongoDB connection error:', err));
+mongoose.connect(mongoUri).catch((err) => console.error('MongoDB connection error:', err));
 
 // REST endpoints
 app.post('/chat', async (req, res) => {

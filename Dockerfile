@@ -1,16 +1,16 @@
 # Build the React frontend
 FROM node:20-alpine AS frontend-build
 WORKDIR /app/chatapp
-COPY chatapp/package.json ./
-RUN npm install
+COPY chatapp/package.json chatapp/package-lock.json ./
+RUN npm ci
 COPY chatapp/ ./
 RUN npm run build
 
 # Build the Node backend
 FROM node:20-alpine AS backend-build
 WORKDIR /app
-COPY package.json ./
-RUN npm install --production
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
 COPY . ./
 
 # Final runtime image
