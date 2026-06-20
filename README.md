@@ -174,6 +174,8 @@ Client (React) --WebSocket--> Backend (Express + Socket.io)
                      |
              AI Service (OpenAI or local)
 
+```
+
 
 ---
 
