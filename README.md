@@ -16,6 +16,7 @@ Sentiment	          sentiment npm package	                               Quick p
 Database	          MongoDB Atlas	                                       Persist chat logs, sentiment metrics
 Deployment	        Vercel (frontend), Render (backend)	                 One‑click, scalable hosting
 CI/CD	             GitHub Actions	                                       Automated tests & build
+<<<<<<< HEAD
 
 
 
@@ -206,5 +207,3 @@ npm test   # runs Jest unit tests (frontend)
 2. Create a feature branch (`git checkout -b feature/xyz`).  
 3. Commit with a clear message.  
 4. Open a pull request.  
-
-
